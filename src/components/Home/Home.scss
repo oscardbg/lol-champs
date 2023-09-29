@@ -1,0 +1,36 @@
+// Imports
+@use "../components" as *;
+
+// Home
+.home {
+	width: 400px;
+	margin: 40px auto;
+	background-color: #222;
+	padding: 40px;
+	border-radius: 8px;
+	border: $brd-w2;
+
+	img {
+		// width: 100%;
+		display: block;
+		margin: 0 auto 40px;
+	}
+
+	h2 {
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+	a {
+		display: block;
+		width: 190px;
+		margin: 0 auto;
+		text-align: center;
+		padding: 10px 0;
+		@extend %btn-gld;
+		transition: 0.2s;
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
+}

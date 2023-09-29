@@ -1,0 +1,22 @@
+// Fonts
+$font-1: Gabarito, sans-serif;
+
+// Colors
+$dark-1: #020406;
+$dark-2: #222;
+$gold-1: #f2bf43;
+$gold-2: #ffd700;
+$gold-3: #ffcc00;
+
+// Borders
+$brd-w1: 1px solid rgba(#fff, 0.1);
+$brd-w2: 1px solid rgba(#fff, 0.2);
+$brd-w3: 1px solid rgba(#fff, 0.3);
+$brd-w4: 1px solid rgba(#fff, 0.4);
+
+// Buttons
+%btn-gld {
+	background-image: linear-gradient(#f2bf43, #d9ab3c);
+	color: $dark-1;
+	border-radius: 6px;
+}
