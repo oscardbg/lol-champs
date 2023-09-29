@@ -2,8 +2,9 @@
 @use "../components" as *;
 
 .champ-item {
-	display: flex;
 	perspective: 500px;
+	flex-basis: 182px;
+	display: flex;
 
 	a {
 		flex-grow: 1;

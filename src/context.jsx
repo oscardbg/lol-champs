@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
 import reducer from "./reducer";
 import { champsData } from "./championsData";
 
@@ -15,9 +15,19 @@ const initialState = {
 function AppProvider({ children }) {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
+	const setSearchName = (value) => {
+		dispatch({ type: "SET_SEARCH_NAME", payload: value });
+	};
+
+	useEffect(() => {
+		dispatch({ type: "BY_NAME" });
+	}, [state.cName]);
+
 	return (
 		<>
-			<AppContext.Provider value={{ ...state }}>{children}</AppContext.Provider>
+			<AppContext.Provider value={{ ...state, setSearchName }}>
+				{children}
+			</AppContext.Provider>
 		</>
 	);
 }
