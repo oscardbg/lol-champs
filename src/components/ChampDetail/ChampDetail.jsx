@@ -1,25 +1,7 @@
 import "./ChampDetail.scss";
 import { useGlobalContext } from "../../context";
 import { Link, useParams } from "react-router-dom";
-
-const scale = [
-	{
-		name: "Easy",
-		value: [0, 1, 2],
-	},
-	{
-		name: "Medium",
-		value: [3, 4, 5],
-	},
-	{
-		name: "Moderate",
-		value: [6, 7, 8],
-	},
-	{
-		name: "Hard",
-		value: [9, 10],
-	},
-];
+import { scale } from "../../utils";
 
 function ChampDetail() {
 	const { champs } = useGlobalContext();
@@ -29,14 +11,13 @@ function ChampDetail() {
 		id: champId,
 		name,
 		title,
-		image,
 		lore,
 		tags,
 		partype,
 		info,
 	} = champs.filter((champ) => champ.key === id)[0];
 	const difficulty = scale.filter((item) =>
-		item.value.includes(info.difficulty)
+		item.values.includes(info.difficulty)
 	)[0].name;
 
 	return (

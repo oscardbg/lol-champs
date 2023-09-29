@@ -6,7 +6,7 @@ const AppContext = createContext();
 
 const initialState = {
 	cName: "",
-	cType: "",
+	cRole: "",
 	cResource: "",
 	cDifficulty: "",
 	champs: champsData,
@@ -15,17 +15,17 @@ const initialState = {
 function AppProvider({ children }) {
 	const [state, dispatch] = useReducer(reducer, initialState);
 
-	const setSearchName = (value) => {
-		dispatch({ type: "SET_SEARCH_NAME", payload: value });
+	const handleInput = (name, value) => {
+		dispatch({ type: "HANDLE_INPUT", field: name, payload: value });
 	};
 
 	useEffect(() => {
-		dispatch({ type: "BY_NAME" });
-	}, [state.cName]);
+		dispatch({ type: "FILTER_CHAMPS" });
+	}, [state.cName, state.cRole, state.cResource, state.cDifficulty]);
 
 	return (
 		<>
-			<AppContext.Provider value={{ ...state, setSearchName }}>
+			<AppContext.Provider value={{ ...state, handleInput }}>
 				{children}
 			</AppContext.Provider>
 		</>
