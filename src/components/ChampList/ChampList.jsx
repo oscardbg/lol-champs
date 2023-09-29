@@ -9,7 +9,7 @@ function ChampList() {
 		<>
 			<ul className="champ-list">
 				{champs.map((item) => (
-					<ChampItem item={item} />
+					<ChampItem item={item} key={item.key} />
 				))}
 			</ul>
 		</>

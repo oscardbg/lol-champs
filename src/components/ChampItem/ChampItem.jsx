@@ -6,8 +6,8 @@ function ChampItem(props) {
 
 	return (
 		<>
-			<li key={key} className="champ-item">
-				<Link>
+			<li className="champ-item">
+				<Link to={key}>
 					<span className="champ">
 						<img src={`./img/championIcons/${image.full}`} alt="" />
 					</span>

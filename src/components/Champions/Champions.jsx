@@ -1,3 +1,4 @@
+import "./Champions.scss";
 import ChampList from "../ChampList";
 
 function Champions() {
