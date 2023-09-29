@@ -1,0 +1,62 @@
+// Imports
+@use "../components" as *;
+
+.about {
+	margin: 40px 0 120px;
+	animation: show-2 0.5s;
+
+	article {
+		padding: 20px;
+		background-color: #222;
+		border: $brd-w2;
+		border-radius: 8px;
+		text-align: center;
+		margin-bottom: 20px;
+
+		img {
+			display: block;
+			margin: 0 auto;
+		}
+
+		h2 {
+			color: $gold-1;
+			margin: 10px 0;
+		}
+		h4 {
+			color: $gold-1;
+		}
+		span {
+			display: block;
+			// margin-bottom: 10px;
+			color: $gold-1;
+		}
+		p {
+			margin-top: 10px;
+		}
+		.social {
+			margin-top: 10px;
+		}
+		a {
+			display: inline-block;
+			background-color: $gold-1;
+			border-radius: 6px;
+			margin-left: 20px;
+			color: $dark-1;
+			padding: 10px 20px;
+		}
+	}
+}
+
+@include responsify(1040px) {
+	.about {
+		padding: 0 20px;
+	}
+}
+
+@include responsify(500px) {
+	.about {
+		img {
+			width: 80%;
+		}
+	}
+}

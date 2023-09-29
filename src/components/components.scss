@@ -32,3 +32,10 @@ $brd-w4: 1px solid rgba(#fff, 0.4);
 		transform: translateX(0);
 	}
 }
+
+// Mixins
+@mixin responsify($size) {
+	@media screen and (max-width: $size) {
+		@content;
+	}
+}

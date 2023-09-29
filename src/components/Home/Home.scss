@@ -4,7 +4,7 @@
 // Home
 .home {
 	width: 400px;
-	margin: 40px auto;
+	margin: 40px auto 120px;
 	background-color: #222;
 	padding: 40px;
 	border-radius: 8px;
@@ -32,6 +32,15 @@
 		transition: 0.2s;
 		&:hover {
 			transform: scale(1.03);
+		}
+	}
+}
+
+@include responsify(500px) {
+	.home {
+		width: 90%;
+		img {
+			width: 100%;
 		}
 	}
 }

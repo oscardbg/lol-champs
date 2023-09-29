@@ -28,7 +28,9 @@ function ChampDetail() {
 					<span>Go Back</span>
 				</Link>
 				<article>
-					<img src={`../img/loading/${champId}_0.jpg`} alt="" />
+					<div className="champ-img">
+						<img src={`../img/loading/${champId}_0.jpg`} alt="" />
+					</div>
 					<div className="champ-info">
 						<h2>{name}</h2>
 						<h3>{title}</h3>

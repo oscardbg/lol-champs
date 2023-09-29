@@ -66,3 +66,39 @@
 		right: -10px;
 	}
 }
+
+@include responsify(800px) {
+	.champ-item {
+		flex-basis: 150px;
+
+		.champ {
+			width: 90px;
+			height: 90px;
+			img {
+				width: 100px;
+			}
+		}
+
+		.name {
+			font-size: 1rem;
+			margin: 10px 0 5px;
+		}
+		.title {
+			font-size: 0.8rem;
+		}
+	}
+}
+
+@include responsify(600px) {
+	.champ-item {
+		flex-basis: 120px;
+
+		.champ {
+			width: 70px;
+			height: 70px;
+			img {
+				width: 80px;
+			}
+		}
+	}
+}
