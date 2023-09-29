@@ -19,13 +19,17 @@ function AppProvider({ children }) {
 		dispatch({ type: "HANDLE_INPUT", field: name, payload: value });
 	};
 
+	const clearFilters = () => {
+		dispatch({ type: "CLEAR_FILTERS" });
+	};
+
 	useEffect(() => {
 		dispatch({ type: "FILTER_CHAMPS" });
 	}, [state.cName, state.cRole, state.cResource, state.cDifficulty]);
 
 	return (
 		<>
-			<AppContext.Provider value={{ ...state, handleInput }}>
+			<AppContext.Provider value={{ ...state, handleInput, clearFilters }}>
 				{children}
 			</AppContext.Provider>
 		</>

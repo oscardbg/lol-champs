@@ -30,6 +30,15 @@ const reducer = (state, action) => {
 				.filter((champ) => cResource === "" || champ.partype === cResource);
 			return { ...state, champs: newList };
 		}
+		case "CLEAR_FILTERS": {
+			return {
+				...state,
+				cName: "",
+				cRole: "",
+				cResource: "",
+				cDifficulty: "",
+			};
+		}
 		default: {
 			return state;
 		}
