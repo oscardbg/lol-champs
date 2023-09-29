@@ -89,7 +89,7 @@
 	}
 }
 
-@include responsify(600px) {
+@include responsify(650px) {
 	.champ-item {
 		flex-basis: 120px;
 

@@ -23,7 +23,10 @@ function About() {
 					<p>Oscar Pastrano</p>
 					<p>
 						Github:
-						<a href="https://github.com/oscardbg"> /oscardbg</a>
+						<a href="https://github.com/oscardbg" target="_blank">
+							{" "}
+							/oscardbg
+						</a>
 					</p>
 				</article>
 			</section>

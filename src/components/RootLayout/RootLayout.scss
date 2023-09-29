@@ -6,6 +6,7 @@ nav {
 	max-width: 1000px;
 	margin: 0 auto;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 0;
@@ -48,10 +49,62 @@ nav {
 			}
 		}
 	}
+
+	.bars {
+		display: none;
+		cursor: pointer;
+		padding: 0 10px;
+
+		svg {
+			width: 40px;
+		}
+		&:hover {
+			color: $gold-1;
+		}
+	}
 }
 
 // Main Container
 .container {
 	max-width: 1000px;
 	margin: 0 auto;
+}
+
+@include responsify(1040px) {
+	nav {
+		padding: 10px 20px;
+	}
+}
+
+@include responsify(650px) {
+	nav {
+		.bars {
+			display: block;
+		}
+		ul {
+			width: 100%;
+			display: block;
+			overflow: hidden;
+			max-height: 0;
+			margin-top: 10px;
+			transition: 0.3s ease;
+			li {
+				margin-bottom: 5px;
+				border: $brd-w2;
+				&:hover {
+					border: $brd-w4;
+				}
+			}
+			a {
+				width: 100%;
+				background-color: #222;
+				&::after {
+					display: none;
+				}
+			}
+			&.active {
+				max-height: 20rem;
+			}
+		}
+	}
 }
