@@ -10,6 +10,7 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	padding: 10px 0;
+	animation: show-3 0.8s;
 
 	& > a {
 		color: $gold-1;
@@ -97,6 +98,7 @@ nav {
 			}
 			a {
 				width: 100%;
+				padding: 10px 0;
 				background-color: #222;
 				&::after {
 					display: none;

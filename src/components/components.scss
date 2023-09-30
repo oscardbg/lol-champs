@@ -33,6 +33,17 @@ $brd-w4: 1px solid rgba(#fff, 0.4);
 	}
 }
 
+@keyframes show-3 {
+	from {
+		opacity: 0;
+		transform: translateY(-200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 // Mixins
 @mixin responsify($size) {
 	@media screen and (max-width: $size) {

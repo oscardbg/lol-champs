@@ -15,10 +15,10 @@ function ChampDetail() {
 		tags,
 		partype,
 		info,
-	} = champs.filter((champ) => champ.key === id)[0];
-	const difficulty = scale.filter((item) =>
+	} = champs.find((champ) => champ.key === id);
+	const difficulty = scale.find((item) =>
 		item.values.includes(info.difficulty)
-	)[0].name;
+	).name;
 
 	return (
 		<>
